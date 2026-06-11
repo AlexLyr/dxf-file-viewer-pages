@@ -114,14 +114,15 @@ h1 {
 
 .source-link {
   display: inline-block;
-  margin-top: 10px;
-  color: #98a2b3;
-  font-size: 0.78em;
-  text-decoration: underline;
+  margin-top: 28px;
+  color: #c2c9d4;
+  font-size: 0.62em;
+  text-decoration: none;
 }
 
 .source-link:hover {
-  color: #667085;
+  color: #98a2b3;
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {
