@@ -112,6 +112,18 @@ h1 {
   text-align: center;
 }
 
+.source-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #98a2b3;
+  font-size: 0.78em;
+  text-decoration: underline;
+}
+
+.source-link:hover {
+  color: #667085;
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 18px 14px 36px;
