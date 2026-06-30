@@ -48,6 +48,10 @@
           autocapture: false,
           capture_pageview: true,
         });
+        const did = new URLSearchParams(window.location.search).get("did");
+        if (did) {
+          posthog.identify(did);
+        }
         posthog.capture("ext_installed", { source: "welcome_page" });
       }
     </script>

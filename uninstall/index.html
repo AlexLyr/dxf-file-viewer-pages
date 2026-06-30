@@ -45,8 +45,13 @@
           capture_pageview: true,
         });
         const params = new URLSearchParams(window.location.search);
+        const did = params.get("did");
+        if (did) {
+          posthog.identify(did);
+        }
         posthog.capture("ext_uninstalled", {
           source: "uninstall_page",
+          did_present: Boolean(did),
           reason: params.get("reason") || "unknown",
         });
       }
