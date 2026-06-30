@@ -12,6 +12,45 @@
     <link rel="apple-touch-icon" href="./assets/icon-128.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="https://cloud.umami.is/script.js" data-website-id="99235578-3915-4a83-b3e1-3061d73a6fee"></script>
+    <script>
+      (function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              o.length == 2 && ((t = t[o[0]]), (e = o[1]));
+              t[e] = function () {
+                t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+              };
+            }
+            ((p = t.createElement("script")).type = "text/javascript"), (p.crossOrigin = "anonymous"), (p.async = !0), (p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js"), (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+            var u = e;
+            for (a !== void 0 ? (u = e[a] = []) : (a = "posthog"), u.people = u.people || [], u.toString = function (t) {
+              var e = "posthog";
+              return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+            }, u.people.toString = function () {
+              return u.toString(1) + ".people (stub)";
+            }, o = "init capture register register_once register_for_session unregister unregister_for_session identify alias set_config reset opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug get_distinct_id set_person_properties set_person_properties_for_flags".split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+
+      const POSTHOG_KEY = "phc_CVxrtqnabKHaTqcSSexcaXSJfkYMbJytX7ygRyKFbrse";
+      if (POSTHOG_KEY) {
+        posthog.init(POSTHOG_KEY, {
+          api_host: "https://eu.i.posthog.com",
+          defaults: "2026-05-30",
+          person_profiles: "identified_only",
+          autocapture: false,
+          capture_pageview: true,
+        });
+        posthog.capture("ext_installed", { source: "welcome_page" });
+      }
+    </script>
   </head>
   <body>
     <main class="page">
